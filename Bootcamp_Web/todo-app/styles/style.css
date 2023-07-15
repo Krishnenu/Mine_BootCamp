@@ -1,0 +1,22 @@
+#heading-text{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text-input-box{
+    width: 500px;
+    height: 30px;
+    border: 5px solid black;
+}
+
+#submit-btn{
+    width: 100px;
+    height: 40px;
+    margin-left: 15px;  
+}

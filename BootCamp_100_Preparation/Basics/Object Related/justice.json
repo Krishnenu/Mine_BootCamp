@@ -1,0 +1,1091 @@
+{
+    "locations": [
+      {
+        "name": "Evergreen Heights",
+        "locationID": "LID001",
+        "buildings": [
+          {
+            "id": "BID001",
+            "name": "Hillside Manor",
+            "owners": [
+              {
+                "name": "John Doe",
+                "isCriminal": false
+              },
+              {
+                "name": "Jane Smith",
+                "isCriminal": true
+              },
+              {
+                "name": "Jane Smith",
+                "isCriminal": true
+              },
+              {
+                "name": "Jane Smith",
+                "isCriminal": true
+              },
+              {
+                "name": "Jane Smith",
+                "isCriminal": true
+              }
+            ]
+          },
+          {
+            "id": "BID002",
+            "name": "Garden View Apartments",
+            "owners": [
+              {
+                "name": "Michael Johnson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Riverside Park",
+        "locationID": "LID002",
+        "buildings": [
+          {
+            "id": "BID003",
+            "name": "Maple Court",
+            "owners": [
+              {
+                "name": "Emily Davis",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID004",
+            "name": "Willow Creek Apartments",
+            "owners": [
+              {
+                "name": "Christopher Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Sarah Thompson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pineview Estates",
+        "locationID": "LID003",
+        "buildings": [
+          {
+            "id": "BID005",
+            "name": "Cypress Gardens",
+            "owners": [
+              {
+                "name": "Daniel Brown",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID006",
+            "name": "Willow Grove Condos",
+            "owners": [
+              {
+                "name": "Emma Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Jacob Davis",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lakeview Terrace",
+        "locationID": "LID004",
+        "buildings": [
+          {
+            "id": "BID007",
+            "name": "Sunset Apartments",
+            "owners": [
+              {
+                "name": "Olivia Martinez",
+                "isCriminal": false
+              },
+              {
+                "name": "William Johnson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID008",
+            "name": "Lakeside Villas",
+            "owners": [
+              {
+                "name": "Sophia Anderson",
+                "isCriminal": false
+              },
+              {
+                "name": "Ethan Thompson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Crestview Heights",
+        "locationID": "LID005",
+        "buildings": [
+          {
+            "id": "BID009",
+            "name": "Mountain View Towers",
+            "owners": [
+              {
+                "name": "Isabella Wilson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID010",
+            "name": "Highland Apartments",
+            "owners": [
+              {
+                "name": "Mason Davis",
+                "isCriminal": true
+              },
+              {
+                "name": "Ava Wilson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Harbor View",
+        "locationID": "LID006",
+        "buildings": [
+          {
+            "id": "BID011",
+            "name": "Seaside Condos",
+            "owners": [
+              {
+                "name": "Logan Garcia",
+                "isCriminal": false
+              },
+              {
+                "name": "Charlotte Martinez",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID012",
+            "name": "Marina Heights",
+            "owners": [
+              {
+                "name": "Benjamin Thompson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Windsor Gardens",
+        "locationID": "LID007",
+        "buildings": [
+          {
+            "id": "BID013",
+            "name": "Rosewood Apartments",
+            "owners": [
+              {
+                "name": "Harper Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Leo Garcia",
+                "isCriminal": true
+              }
+            ]
+          },
+          {
+            "id": "BID014",
+            "name": "Ivy Court",
+            "owners": [
+              {
+                "name": "Liam Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Grace Johnson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fairview Place",
+        "locationID": "LID008",
+        "buildings": [
+          {
+            "id": "BID015",
+            "name": "Willow View",
+            "owners": [
+              {
+                "name": "Lucas Anderson",
+                "isCriminal": true
+              }
+            ]
+          },
+          {
+            "id": "BID016",
+            "name": "Cedar Court Apartments",
+            "owners": [
+              {
+                "name": "Lily Thompson",
+                "isCriminal": false
+              },
+              {
+                "name": "Henry Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Oakland Heights",
+        "locationID": "LID009",
+        "buildings": [
+          {
+            "id": "BID017",
+            "name": "Acorn Gardens",
+            "owners": [
+              {
+                "name": "Evelyn Davis",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID018",
+            "name": "Redwood Manor",
+            "owners": [
+              {
+                "name": "Jackson Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Victoria Johnson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Parkside Place",
+        "locationID": "LID010",
+        "buildings": [
+          {
+            "id": "BID019",
+            "name": "Maplewood Heights",
+            "owners": [
+              {
+                "name": "Sebastian Thompson",
+                "isCriminal": false
+              },
+              {
+                "name": "Elizabeth Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID020",
+            "name": "Pinecrest Condos",
+            "owners": [
+              {
+                "name": "Andrew Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Chloe Davis",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Meadowbrook",
+        "locationID": "LID011",
+        "buildings": [
+          {
+            "id": "BID021",
+            "name": "Briarwood Apartments",
+            "owners": [
+              {
+                "name": "Emily Wilson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID022",
+            "name": "Willow Lane",
+            "owners": [
+              {
+                "name": "Alexander Martinez",
+                "isCriminal": false
+              },
+              {
+                "name": "Mia Thompson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rosewood Hills",
+        "locationID": "LID012",
+        "buildings": [
+          {
+            "id": "BID023",
+            "name": "Oakridge Condos",
+            "owners": [
+              {
+                "name": "Daniel Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Avery Wilson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID024",
+            "name": "Chestnut Court",
+            "owners": [
+              {
+                "name": "Abigail Johnson",
+                "isCriminal": false
+              },
+              {
+                "name": "Noah Garcia",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Whispering Pines",
+        "locationID": "LID013",
+        "buildings": [
+          {
+            "id": "BID025",
+            "name": "Pineview Apartments",
+            "owners": [
+              {
+                "name": "Sophia Wilson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID026",
+            "name": "Spruce Grove",
+            "owners": [
+              {
+                "name": "Benjamin Garcia",
+                "isCriminal": false
+              },
+              {
+                "name": "Emily Johnson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brookside Estates",
+        "locationID": "LID014",
+        "buildings": [
+          {
+            "id": "BID027",
+            "name": "Willowbrook Villas",
+            "owners": [
+              {
+                "name": "Jacob Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Ella Davis",
+                "isCriminal": true
+              }
+            ]
+          },
+          {
+            "id": "BID028",
+            "name": "Meadowlark Court",
+            "owners": [
+              {
+                "name": "Michael Thompson",
+                "isCriminal": false
+              },
+              {
+                "name": "Sofia Garcia",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sunnydale",
+        "locationID": "LID015",
+        "buildings": [
+          {
+            "id": "BID029",
+            "name": "Sunrise Apartments",
+            "owners": [
+              {
+                "name": "Daniel Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Scarlett Johnson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID030",
+            "name": "Daisy Court",
+            "owners": [
+              {
+                "name": "Liam Garcia",
+                "isCriminal": false
+              },
+              {
+                "name": "Aria Davis",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Greenfield Heights",
+        "locationID": "LID016",
+        "buildings": [
+          {
+            "id": "BID031",
+            "name": "Parkside Condos",
+            "owners": [
+              {
+                "name": "Carter Thompson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID032",
+            "name": "Meadowview Apartments",
+            "owners": [
+              {
+                "name": "Avery Davis",
+                "isCriminal": true
+              },
+              {
+                "name": "Charlotte Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hillside Terrace",
+        "locationID": "LID017",
+        "buildings": [
+          {
+            "id": "BID033",
+            "name": "Pine Ridge Apartments",
+            "owners": [
+              {
+                "name": "Jackson Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID034",
+            "name": "Valley View",
+            "owners": [
+              {
+                "name": "Harper Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Mason Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maplewood",
+        "locationID": "LID018",
+        "buildings": [
+          {
+            "id": "BID035",
+            "name": "Maple Grove",
+            "owners": [
+              {
+                "name": "Lucy Thompson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID036",
+            "name": "Oakwood Terrace",
+            "owners": [
+              {
+                "name": "Caleb Davis",
+                "isCriminal": true
+              },
+              {
+                "name": "Aurora Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Willowbrook",
+        "locationID": "LID019",
+        "buildings": [
+          {
+            "id": "BID037",
+            "name": "Pineview Villas",
+            "owners": [
+              {
+                "name": "Ethan Davis",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID038",
+            "name": "Riverwood Court",
+            "owners": [
+              {
+                "name": "Amelia Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Gabriel Johnson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Oakridge",
+        "locationID": "LID020",
+        "buildings": [
+          {
+            "id": "BID039",
+            "name": "Hickory Grove",
+            "owners": [
+              {
+                "name": "Evelyn Thompson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID040",
+            "name": "Chestnut Lane",
+            "owners": [
+              {
+                "name": "Leo Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Victoria Davis",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Riverdale",
+        "locationID": "LID021",
+        "buildings": [
+          {
+            "id": "BID041",
+            "name": "Riverside Apartments",
+            "owners": [
+              {
+                "name": "Harper Johnson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID042",
+            "name": "Meadowview Terrace",
+            "owners": [
+              {
+                "name": "Mason Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Ava Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cedarwood",
+        "locationID": "LID022",
+        "buildings": [
+          {
+            "id": "BID043",
+            "name": "Pine Hill Apartments",
+            "owners": [
+              {
+                "name": "Carter Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID044",
+            "name": "Cedarwood Court",
+            "owners": [
+              {
+                "name": "Scarlett Thompson",
+                "isCriminal": false
+              },
+              {
+                "name": "Noah Davis",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hawthorne",
+        "locationID": "LID023",
+        "buildings": [
+          {
+            "id": "BID045",
+            "name": "Hillside View",
+            "owners": [
+              {
+                "name": "Evelyn Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID046",
+            "name": "Willow Creek",
+            "owners": [
+              {
+                "name": "Jackson Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Avery Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sycamore",
+        "locationID": "LID024",
+        "buildings": [
+          {
+            "id": "BID047",
+            "name": "Maplewood Court",
+            "owners": [
+              {
+                "name": "Lucy Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID048",
+            "name": "Oakwood Apartments",
+            "owners": [
+              {
+                "name": "Caleb Wilson",
+                "isCriminal": true
+              },
+              {
+                "name": "Aurora Davis",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pinehurst",
+        "locationID": "LID025",
+        "buildings": [
+          {
+            "id": "BID049",
+            "name": "Pineview Court",
+            "owners": [
+              {
+                "name": "Ethan Wilson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID050",
+            "name": "Riverwood Terrace",
+            "owners": [
+              {
+                "name": "Amelia Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Gabriel Wilson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Magnolia",
+        "locationID": "LID026",
+        "buildings": [
+          {
+            "id": "BID051",
+            "name": "Hickory Lane",
+            "owners": [
+              {
+                "name": "Evelyn Davis",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID052",
+            "name": "Chestnut Terrace",
+            "owners": [
+              {
+                "name": "Leo Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Victoria Davis",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pinebrook",
+        "locationID": "LID027",
+        "buildings": [
+          {
+            "id": "BID053",
+            "name": "Riverside Condos",
+            "owners": [
+              {
+                "name": "Harper Johnson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID054",
+            "name": "Meadowview Court",
+            "owners": [
+              {
+                "name": "Mason Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Ava Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sagebrook",
+        "locationID": "LID028",
+        "buildings": [
+          {
+            "id": "BID055",
+            "name": "Pine Hill Villas",
+            "owners": [
+              {
+                "name": "Carter Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID056",
+            "name": "Cedarwood Terrace",
+            "owners": [
+              {
+                "name": "Scarlett Thompson",
+                "isCriminal": false
+              },
+              {
+                "name": "Noah Davis",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stonebridge",
+        "locationID": "LID029",
+        "buildings": [
+          {
+            "id": "BID057",
+            "name": "Hillside Manor",
+            "owners": [
+              {
+                "name": "Evelyn Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID058",
+            "name": "Willow Creek Apartments",
+            "owners": [
+              {
+                "name": "Jackson Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Avery Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chestnutville",
+        "locationID": "LID030",
+        "buildings": [
+          {
+            "id": "BID059",
+            "name": "Maplewood Court",
+            "owners": [
+              {
+                "name": "Lucy Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID060",
+            "name": "Oakwood Apartments",
+            "owners": [
+              {
+                "name": "Caleb Wilson",
+                "isCriminal": true
+              },
+              {
+                "name": "Aurora Davis",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Willowdale",
+        "locationID": "LID031",
+        "buildings": [
+          {
+            "id": "BID061",
+            "name": "Pineview Court",
+            "owners": [
+              {
+                "name": "Ethan Wilson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID062",
+            "name": "Riverwood Terrace",
+            "owners": [
+              {
+                "name": "Amelia Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Gabriel Wilson",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cedarhurst",
+        "locationID": "LID032",
+        "buildings": [
+          {
+            "id": "BID063",
+            "name": "Hickory Lane",
+            "owners": [
+              {
+                "name": "Evelyn Davis",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID064",
+            "name": "Chestnut Terrace",
+            "owners": [
+              {
+                "name": "Leo Wilson",
+                "isCriminal": false
+              },
+              {
+                "name": "Victoria Davis",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Riverstone",
+        "locationID": "LID033",
+        "buildings": [
+          {
+            "id": "BID065",
+            "name": "Riverside Condos",
+            "owners": [
+              {
+                "name": "Harper Johnson",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID066",
+            "name": "Meadowview Court",
+            "owners": [
+              {
+                "name": "Mason Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Ava Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maplehurst",
+        "locationID": "LID034",
+        "buildings": [
+          {
+            "id": "BID067",
+            "name": "Pine Hill Villas",
+            "owners": [
+              {
+                "name": "Carter Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID068",
+            "name": "Cedarwood Terrace",
+            "owners": [
+              {
+                "name": "Scarlett Thompson",
+                "isCriminal": false
+              },
+              {
+                "name": "Noah Davis",
+                "isCriminal": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Oakdale",
+        "locationID": "LID035",
+        "buildings": [
+          {
+            "id": "BID069",
+            "name": "Hillside Manor",
+            "owners": [
+              {
+                "name": "Evelyn Garcia",
+                "isCriminal": false
+              }
+            ]
+          },
+          {
+            "id": "BID070",
+            "name": "Willow Creek Apartments",
+            "owners": [
+              {
+                "name": "Jackson Davis",
+                "isCriminal": false
+              },
+              {
+                "name": "Avery Wilson",
+                "isCriminal": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
