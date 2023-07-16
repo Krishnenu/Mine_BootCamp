@@ -36,7 +36,7 @@
 const arr=[1,2,3];
 
 function reverseArray(array, res,i){//result non-premitive CBR
- if(i === array.length){
+ if(i === (array.length/2)){
     return;
  }
  reverseArray(array, res,i+1);
