@@ -1,0 +1,31 @@
+#main-header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#todo_input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#add_todo_btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #008cba;
+    padding: 12px 20px;
+    font-size: 20px;
+}
+
+.main-header {
+    font-size: 48px;
+    color: white;
+    margin-top: 48px;
+  }
+  .main-header-focus {
+    font-size: 48px;
+    color: var(--color);
+  }
