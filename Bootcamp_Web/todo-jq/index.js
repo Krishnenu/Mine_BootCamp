@@ -21,42 +21,79 @@ function unMounting(){
     $("#todo_list_display").empty();
 }
 
+// Delete any task
+
 function deleteTaskTodo(index){
-        _toDoArray.splice(index,1);
-        renderList();
+    _toDoArray.splice(index,1);
+    _topPointer=_topPointer-1;
+    unMounting();
+    reRenderList();
 }
 
+// Edit and update task:
+
+function editAndUpdate(index){
+    $(`#val_${index}`).addClass("sec-hide");
+    $(`#edit_input_${index}`).removeClass("sec-hide");
+    $(`#edit_input_${index}`).val(_toDoArray[index]);
+    $(`#edit_delete_cont_${index}`).addClass("sec-hide");
+    $(`#save_edit_btn_${index}`).removeClass("sec-hide");    
+          
+}
+
+
+// All Event Binding:
 
 function allEventsBinding(){
     $("#add_todo_btn").on("click",function (){
        addTaskTodo($("#todo_input").val());
-       renderList();
-    })
-    
-    $("#removeBtn").on("click",function (){
-        deleteTaskTodo(_topPointer);
+       $("#todo_input").val("");
+       unMounting();
+       reRenderList();
     });
+    $("#main-header").on("focus", function () {
+        $("#main-header").addClass("main-header-focus");
+      });
+      $("#main-header").off("focus", function () {
+        $("#main-header").addClass("main-header");
+      });
 }
 
+// View layer reRendering:
+
+function reRenderList(){
 // Rendering each element of a task:
-function renderList(){
-    unMounting();
+    
     _toDoArray.forEach((todo,index)=>{
         $("#todo_list_display").append(`
             <div id="section-bar" class="section-bar">
-                <div id="${todo+"_"+index}" class="todoItem">
+                <div id="val_${index}" class="todoItem">
                     ${todo}
                 </div>
                 <input id= "edit_input_${index}" class="todo-input-small sec-hide" />
 
                 <div id="edit_delete_cont_${index}" >
-                    <button id="editBtn" class="editBtn">Edit</button>
-                    <button id="removeBtn" class="removeBtn">X</button>
+                    <button id="editBtn${index}" class="editBtn">Edit</button>
+                    <button id="removeBtn${index}" class="removeBtn">X</button>
                 </div>
                 
                 <button class="add-button B1 sec-hide" id="save_edit_btn_${index}" >Save</button>
             </div>
+            
         `);
-    });
+        $(`#removeBtn${index}`).on("click",function (){
+            deleteTaskTodo(index);
+        });
+
+        $(`#editBtn${index}`).on("click",function (){
+            editAndUpdate(index);
+        });
+
+        $(`#save_edit_btn_${index}`).on("click",function(){
+            _toDoArray[index] = $(`#edit_input_${index}`).val();
+            unMounting();
+            reRenderList();
+        }); 
+    });   
     
 }

@@ -29,3 +29,6 @@
     font-size: 48px;
     color: var(--color);
   }
+  .sec-hide {
+    display: none;
+  }
