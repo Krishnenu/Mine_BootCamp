@@ -13,6 +13,7 @@ function addTaskTodo(todo){
         return;
     }
     _toDoArray.push(todo);
+    _topPointer=_topPointer+1;
 }
 
 // empty the task from task list:
@@ -20,15 +21,21 @@ function unMounting(){
     $("#todo_list_display").empty();
 }
 
-function deleteTaskTodo(){
-    _toDoArray.splice(index,1);
+function deleteTaskTodo(index){
+        _toDoArray.splice(index,1);
+        renderList();
 }
+
 
 function allEventsBinding(){
     $("#add_todo_btn").on("click",function (){
        addTaskTodo($("#todo_input").val());
        renderList();
     })
+    
+    $("#removeBtn").on("click",function (){
+        deleteTaskTodo(_topPointer);
+    });
 }
 
 // Rendering each element of a task:
@@ -50,6 +57,6 @@ function renderList(){
                 <button class="add-button B1 sec-hide" id="save_edit_btn_${index}" >Save</button>
             </div>
         `);
-
     });
+    
 }
