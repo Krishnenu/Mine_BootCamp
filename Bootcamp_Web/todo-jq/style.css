@@ -12,13 +12,6 @@
     font-size: 20px;
 }
 
-#add_todo_btn {
-    background-color: white;
-    color: black;
-    border: 2px solid #008cba;
-    padding: 12px 20px;
-    font-size: 20px;
-}
 
 .main-header {
     font-size: 48px;
@@ -32,3 +25,15 @@
   .sec-hide {
     display: none;
   }
+
+  .section-bar{
+    display: inline;
+  }
+
+#add_todo_btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #008cba;
+    padding: 12px 20px;
+    font-size: 20px;
+}

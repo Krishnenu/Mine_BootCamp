@@ -41,7 +41,6 @@ function editAndUpdate(index){
           
 }
 
-
 // All Event Binding:
 
 function allEventsBinding(){
@@ -62,8 +61,7 @@ function allEventsBinding(){
 // View layer reRendering:
 
 function reRenderList(){
-// Rendering each element of a task:
-    
+// Rendering each element of a task:    
     _toDoArray.forEach((todo,index)=>{
         $("#todo_list_display").append(`
             <div id="section-bar" class="section-bar">
@@ -95,5 +93,4 @@ function reRenderList(){
             reRenderList();
         }); 
     });   
-    
 }
