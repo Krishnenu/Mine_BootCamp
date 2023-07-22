@@ -9,9 +9,13 @@ class Stack {
    * @return {number} The new length of the stack.
    */
   push(item) {
+    console.log(item.trim());
+    if(item){
+      throw new Error ("Please Enter a valid Input:")
+    }
     this.data[this.top] = item;
     this.top=this.top+1;  
-    return `New Length = ${this.top}`;
+    return this.top; 
   }
 
   /**
@@ -19,15 +23,13 @@ class Stack {
    * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
    */
   pop() {
-
     if (this.top===0){
-        throw new Error("Stack is Empty Please a Item to stack.");
-    }
-    if (!(this.data[this.top]===" ")){
+        return;
+    }    
         this.data[this.top]= undefined;
         this.top=this.top-1;
-    }
-    return this.data[this.top]===" "?undefined:this.data[this.top];
+    
+    return this.data[this.top];
   }
 
   /**
@@ -43,7 +45,10 @@ class Stack {
    * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
    */
   peek() {
-    return (this.data[this.top-1]===(undefined || " "))?undefined:(this.data[this.top-1]);
+      if(this.isEmpty()){
+        return
+      }
+      return this.data[this.top-1];
     }
 
   /**
@@ -51,7 +56,7 @@ class Stack {
    * @return {number} The number of items in the stack.
    */
   length() {
-   return `No of Item in Stack= ${this.data.length}`;
+   return this.data.length;//return type mismatch
   }
 }
 
@@ -60,12 +65,12 @@ const s=new Stack();
 // console.log(s.push("hi1"));
 // console.log(s.push("hi2"));
 // console.log(s.push("hi3"));
-// console.log(s.push("hi4"));
 console.log(s.push(" "));
+
+
 // console.log(s.pop());
-console.log(s.peek());
 // console.log(s.isEmpty());
-// console.log(s.peek());
+// console.log(s.peek()); 
 // console.log(s.pop());
 // console.log(s.push("hellow"));
 // console.log(s.pop());
