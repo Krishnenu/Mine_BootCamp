@@ -1,4 +1,4 @@
-const taskdata=require('./assignedTask.json');
+const taskdata=require('./filterTask.json');
 
 
 function getPropertyByStatusName(propertyName,statusName){
@@ -8,8 +8,7 @@ function getPropertyByStatusName(propertyName,statusName){
 		if(progress===propertyName){
 			taskStatus.push(task[statusName]);
 		}
-	}
-			
+	}			
 	return taskStatus.sort();
 }
 

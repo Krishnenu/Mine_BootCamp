@@ -1,27 +1,27 @@
-// Input: nums = [3, 2, 3, 5, 3, 7, 8, 3], val = 3
-// Output: 4
-// Explanation: After removing all occurrences of 3 from the array, the modified array becomes [2, 5, 7, 8], and its length is 4.
+const removeAllOccurances = (arr,val) => {
+    let left = 0;
+    let right = arr.length-1;
 
-const nums = [3, 2, 3, 5, 3, 7, 8, 3];
-
-function removeOccurence(arr,key){
-    let first=0;
-    let last=arr.length-1;
-
-    while(first<last){
-        if(arr[first]===key && arr[last]===key){
-            last=last-1;
-        }else if((!(arr[last]===key) && arr[first]===key) || (arr[last]===key) && !(arr[first]===key)){
-            let temp=arr[last];
-            arr[last]=arr[first];
-            arr[first]=temp;
-            first=first+1;
-            last=last-1;
-        }else if(!(arr[last]===key) && !(arr[first]===key)){
-            first=first+1;
+    while(left < right){
+        if(arr[left]===val){
+            if(arr[right]===val){
+                right--;
+            }else{
+                let temp = arr[right];
+                arr[right] = arr[left];
+                arr[left] = temp;
+                right--;
+                left++;
+            }
+        }else{
+            if(arr[right]===val){
+                right--;
+            }else{
+                left++;
+            }
         }
     }
-return arr;
 }
-
-console.log(removeOccurence(nums,3));
+let arr = [3, 2, 3, 5, 3, 7, 8, 3];
+removeAllOccurances(arr,3);
+console.log(arr);
