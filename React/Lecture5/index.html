@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .outer-Border {
+            border: 1px solid black;
+            width: 30%;
+            padding: 5%;
+            margin: auto;
+        }
+    </style>
+</head>
+<!-- Conditional Reandering-->
+<!--Input : takes phone number(only number)-->
+<!-- if not valid input does not enable button-->
+<!-- on submit of valid phone number Display on the UI-->
+<!-- Prevent Default: use in From submit, anchor Tag and Enter key we have to use -->
+
+<body>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+        class TextDisplayer extends React.Component {
+            render() {
+                const { kisText } = this.props;
+                return (
+                    <div>
+                        <h1>{kisText}</h1>
+                    </div>
+                )
+            }
+        }
+
+        class PhoneNumber extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    isPhoneNoValid: false,
+                    phoneNum: "",
+                    isTextDisplayer: false
+                };
+            }
+
+            checkPhoneNo(str) {
+                let res = true;
+                str.split("").forEach(digitstr => {
+                    let ascii = digitstr.charCodeAt();
+                    if (!(ascii > 47 && ascii < 58)) {
+                        res = false;
+                    }
+                });
+                return res;
+            }
+
+            onChangePhoneInput(event) {
+                event.preventDefault();
+                if (event.target.value.length !== 10) {
+                    if (this.state.isPhoneNoValid) {
+                        this.setState({
+                            isPhoneNoValid: false,
+                            isTextDisplayer: false
+                        });
+                    }
+                    return false;
+                }
+                if (this.checkPhoneNo(event.target.value)) {
+                    this.setState({
+                        isPhoneNoValid: true,
+                        phoneNum: event.target.value,
+                    })
+                }
+            }
+
+            onSubmitHandler() {
+                if (!this.state.isPhoneNoValid) {
+                    return;
+                }
+                if (this.state.isPhoneNoValid) {
+                    this.setState({
+                        isTextDisplayer: true,
+                    });
+                }
+            }
+
+            render() {
+                return (
+                    <React.Fragment>
+                        <div className="outer-Border">
+                            <label >Phone Number</label>
+                            <input type="text" placeholder="Enter Phone Number" onChange={this.onChangePhoneInput.bind(this)} />
+                            {/**this.state.isPhoneNoValid?<React.Fragment><h1>valid</h1></React.Fragment>:<p>Invalid PhoneNumber</p>*/}
+                            <button onClick={this.onSubmitHandler.bind(this)}>Submit</button>
+                            {this.state.isTextDisplayer ? <TextDisplayer kisText={this.state.phoneNum} /> : <div />}
+                        </div>
+                    </React.Fragment>
+                );
+            }
+        }
+
+        class Container extends React.Component {
+            render() {
+                return (
+                    <React.Fragment>
+                        {/* Composition */}
+                        <PhoneNumber />
+                    </React.Fragment>
+                );
+            }
+        }
+        ReactDOM.render(<Container />, document.getElementById("root"));
+
+    </script>
+</body>
+
+</html>
