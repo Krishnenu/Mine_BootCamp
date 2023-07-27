@@ -57,7 +57,7 @@ var y=10;
 function outer(){
   function inner(){
     console.log(y);
-  }
+  } 
   inner();
   var y=20;
   inner();
