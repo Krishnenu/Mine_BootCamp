@@ -40,13 +40,10 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/babel">
-
-        
+    <script type="text/babel">        
       class Dummy extends React.Component {
         render() {
           //props and Children
-
           return this.props.canDisplay ? (
             <h1>{this.props.children}</h1>
           ) : (
