@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 8</title>
+    <title>Lecture 9</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
@@ -22,22 +22,24 @@
                 super(props);
                 this.state={
                     array:[],
-                    showLength:false
+                    value:"",
+                    dispalyLength:false
                 }
             }
-            value = "";
 
             onInputHandler(event){
-                this.value = event.target.value;
+                this.setState({
+                    value:event.target.value,
+                })
             }
             onPushStart(){
                 this.setState({
-                    array:[this.value,...this.state.array],
+                    array:[this.state.value,...this.state.array],
                 })
             }
             onPushEnd(){
                 this.setState({
-                    array:[...this.state.array,this.value],
+                    array:[...this.state.array,this.state.value],
                 })
             }
             onPopStart(){
@@ -57,14 +59,13 @@
                 });
             }
             onGetLength(){
-                const temp=this.state.showLength;
                 this.setState({
-                    showLength:!temp,
+                    dispalyLength:!this.state.displayLength,
                 })
             }
 
             render(){
-                console.log("Render");
+                console.log(this.state);
                 return (
                     <React.Fragment>
                         <input type="text" onChange={this.onInputHandler.bind(this)}/>
@@ -74,7 +75,7 @@
                         <button onClick={this.onPopEnd.bind(this)}>PopEnd</button>
                         <button onClick={this.onGetLength.bind(this)}>GetLength</button>
                         <h3>{this.state.array.join("|")}</h3>
-                        {this.state.showLength?<h2>{this.state.array.length}</h2>:<div></div>}
+                        {this.state.dispalyLength?<h2>{this.state.array.length}</h2>:<div></div>}
                     </React.Fragment>
                 )
             }
@@ -84,8 +85,7 @@
             render(){
                 return <Deque/>;
             }
-        }
-        
+        }       
 
         ReactDOM.render(<App/>,document.getElementById("root"));
 
