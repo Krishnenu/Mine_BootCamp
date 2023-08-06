@@ -29,16 +29,7 @@
             }
         }
 
-        class Child extends React.Component{
-            
-            shouldComponentUpdate(nextProps){
-                if(nextProps.children !== this.props.children){
-                    return true;
-                }else{
-                    return false;
-                }
-            }
-           
+        class Child extends React.Component{           
             render(){
                 console.log("Child render");
                 const {children} = this.props;
