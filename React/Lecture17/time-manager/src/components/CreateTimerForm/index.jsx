@@ -1,20 +1,13 @@
-// export default (props) => {
-//   return (
-//     <div className="form-div">
-//       <input placeholder="Timer Name"/>
-//       <input placeholder="Timer Duration"/>
-//       <button className="btn-primary">Create Timer</button>
-//     </div>
-//   );
-// };
-
 import { createPortal } from "react-dom";
 import "./timerForm.css";
 import { useState } from "react";
-export default ({ showForm, onCloseForm, onCreateHandler }) => {
+export default ({ showForm, onCloseForm, onCreateHandler,onUpdateHandler, editData,editedIndex}) => {
   // try to impliment custom hooks intead of this and make it dry.
-  const [name, setName] = useState("");
-  const [duration, setDuration] = useState(0);
+  const [name, setName] = useState(editData?.name ? editData.name : "");
+  const [duration, setDuration] = useState(editData?.duration ? editData.duration : "");
+  const [error,setError]=useState("");
+  const [showError,setShowError]=useState(false);
+
 
   const nameHandler = (event) => {
     setName(event.target.value);
@@ -24,11 +17,29 @@ export default ({ showForm, onCloseForm, onCreateHandler }) => {
     setDuration(event.target.value);
   };
 
-  const onCreateTimer = () => {
-    onCreateHandler(name, duration);
-    onCloseForm();
+  const validateHandler = () => {
+    if(name===""){
+      setError("Please Provide a Valid Timer Name");
+      setShowError(true);
+      return;
+    }
+    if (duration==="" || !/^\d+$/.test(duration)){
+      setError("Please Provide a Numeric value in Duration");
+      setShowError(true);
+      return;
+    }
+    if(editData){
+      onUpdateHandler(name,duration,editedIndex);
+    }else{
+        onCreateHandler(name, duration);
+    }
+  //state initialise
+  setName("");
+  setDuration("");
+  onCloseForm();
   };
-  
+
+
   return (
     showForm &&
     createPortal(
@@ -39,12 +50,13 @@ export default ({ showForm, onCloseForm, onCreateHandler }) => {
           onChange={durationHandler}
           value={duration}
         />
-        <button className="btn-primary" onClick={onCreateTimer}>
-          Create Timer
+        <button className="btn-primary" onClick={validateHandler}>
+          {editData? "Edit Timer": "Create Timer" }
         </button>
         <button className="btn-primary" onClick={onCloseForm}>
           close
         </button>
+        {showError?(<h3 className="error">{error}</h3>):<h3 className="error"></h3>}
       </div>,
       document.body
     )
