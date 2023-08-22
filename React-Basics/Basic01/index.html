@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Legacy</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Our React will inject Here-->
+    </div>    
+    <script type="text/babel">
+        // Java Script extension aka JSX
+        // var kisko=<h1>Hellow World</h1>
+        // var kahapar=document.querySelector('#app');
+        // ReactDOM.render(kisko,kahapar);
+
+        class HelloWorld extends React.Component {
+            render() {
+                return (
+                    <React.Fragment>
+                    <h1 className="red">Hellow World</h1>
+                    <input class="inputBox" id="inputId" type="text"/>
+                    <button class="btn" id="buton">Submit</button>
+                    </React.Fragment>
+                )
+                
+            };
+        }
+        var kahapar=document.getElementById('app');
+        ReactDOM.render(<HelloWorld/>,kahapar);
+    </script>
+</body>
+</html>

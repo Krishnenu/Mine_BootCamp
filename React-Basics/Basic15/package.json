@@ -1,0 +1,28 @@
+{
+  "name": "lecture15",
+  "version": "1.0.0",
+  "description": "This Package/Project is to undersatand Project setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "unit-test",
+    "build":"webpack"
+  },
+  "author": "Narayan",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "crypto-browserify": "^3.12.0",
+    "crypto-js": "^4.1.1",
+    "i": "^0.3.7",
+    "lodash": "^4.17.21"
+  }
+}

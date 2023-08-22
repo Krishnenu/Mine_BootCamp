@@ -1,0 +1,44 @@
+.movie-search-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+.input-search {
+    font-size: 1.5rem;
+    width: 40vw;
+    height: 2em;
+    border: 1px dotted skyblue;
+    border-radius: 10px;
+    padding-left: 1em;
+    margin-top: 1em;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-icon{
+    font-size: 3rem;
+    margin: auto;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+
+@media only screen and (max-width:600px){
+    .search-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .input-search{
+        width: 80vw;
+    }
+    .search-icon{
+        margin: auto;
+        margin-top: 1em;
+        
+    }
+
+}

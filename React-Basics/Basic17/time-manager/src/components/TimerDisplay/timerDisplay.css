@@ -1,0 +1,11 @@
+
+.timer{
+    border: 3px solid rgb(24, 191, 16);
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+}

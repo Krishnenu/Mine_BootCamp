@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .outer-Border {
+            border: 1px solid black;
+            width: 30%;
+            padding: 3%;
+            margin: auto;
+            margin-top:15%;
+        }
+        .input-box{
+            height: 20px;
+            width: 50%;
+            display: block;
+            margin: auto;
+            height:25px;
+            border: 3px solid black;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+
+    </style>
+    <title>Type Writter</title>
+</head>
+<body>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+
+    class TypeWritter extends React.Component{
+            constructor(props){
+                super(props);
+                this.state={
+                    textChange:"",
+                }
+            }
+
+        onTextChnageHandler(event){
+            this.setState({
+                textChange:event.target.value,
+                })            
+        }
+
+        render(){
+            return(
+                <React.Fragment>
+                    <div className="outer-Border">
+                        <input type="text" className="input-box" placeholder="Write Text Here" onChange={this.onTextChnageHandler.bind(this)}/>
+                        <h1>{this.state.textChange}</h1>
+                    </div>
+                </React.Fragment>
+            )                
+        } 
+    }      
+        ReactDOM.render(<TypeWritter/>,document.getElementById("root"));
+    </script>
+    
+</body>
+</html>

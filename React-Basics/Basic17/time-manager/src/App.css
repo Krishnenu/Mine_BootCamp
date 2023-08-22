@@ -1,0 +1,15 @@
+.btn-primary {
+    background-color: rgb(24, 191, 16);
+    border: none;
+    color: white;
+    padding: 0.6%;
+    text-align: center;
+    display: inline;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.error {
+    color: red;
+}

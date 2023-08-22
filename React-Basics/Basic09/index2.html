@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 9</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<!-- Two way Binding -->
+<!-- Data passing from Pareent to child and child to parrent -->
+
+<body>
+    <div id="root">
+        <!-- Render Content Here -->
+    </div>
+
+    <script type="text/babel">
+
+        class Child extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    date: Child.getDate(),
+                    timerRef: null,
+                }
+            }
+            static getDate(){
+                const date = new Date();
+                return {
+                    date:date.getDate(),
+                    seconds:date.getSeconds(),
+                };
+             }
+
+            createTimer() {
+                const _this = this;
+                return setInterval(function () {
+                    _this.setState((prevState) => {
+                        return {
+                            date: Child.getDate(),
+                        }
+                    })
+                }, 1000);
+            }
+            onStartTimer() {
+                if(this.state.timerRef !== null){
+                    return;
+                }
+                this.setState({
+                    timerRef: this.createTimer.bind(this)(),
+                });
+            }
+            onStopTimer() {
+                clearInterval(this.state.timerRef);
+                this.setState({
+                    timerRef: null,
+                });
+            }
+
+            render() {
+                console.log(this.state);
+                const { displayData } = this.props;
+                return (
+                    <React.Fragment>
+                        <button onClick={this.onStartTimer.bind(this)}>Start</button>
+                        <button onClick={this.onStopTimer.bind(this)}>Stop</button>
+                        <h1>{this.state.date.seconds}</h1>
+                    </React.Fragment>
+                )
+            }
+        }
+
+        class Parrent extends React.Component {
+            render() {
+                return <Child displayData={"I am Parrent"} />;
+            }
+        }
+
+        ReactDOM.render(<Parrent />, document.getElementById("root"));
+
+    </script>
+</body>
+
+</html>
+
+
+

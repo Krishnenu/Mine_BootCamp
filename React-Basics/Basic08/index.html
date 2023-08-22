@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 9</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<!-- Classic React code Implimentation: -->
+<body>
+    <div id="root">
+    </div>
+    
+
+    <script type ="text/babel">
+
+        class Deque extends React.Component{
+            constructor(props){
+                super(props);
+                this.state={
+                    array:[],
+                    value:"",
+                    dispalyLength:false
+                }
+            }
+
+            onInputHandler(event){
+                this.setState({
+                    value:event.target.value,
+                })
+            }
+            onPushStart(){
+                this.setState({
+                    array:[this.state.value,...this.state.array],
+                })
+            }
+            onPushEnd(){
+                this.setState({
+                    array:[...this.state.array,this.state.value],
+                })
+            }
+            onPopStart(){
+                const arrCopy=[...this.state.array];
+                if(arrCopy.length==0) return; // write the logic to display on UI
+                arrCopy.shift();
+                this.setState({
+                    array:arrCopy,
+                })
+            }
+            onPopEnd(){
+                const arrCopy=[...this.state.array];
+                if(arrCopy.length==0) return; // write the logic to display on UI
+                arrCopy.pop();
+                this.setState({
+                    array:arrCopy,
+                });
+            }
+            onGetLength(){
+                this.setState({
+                    dispalyLength:!this.state.displayLength,
+                })
+            }
+
+            render(){
+                console.log(this.state);
+                return (
+                    <React.Fragment>
+                        <input type="text" onChange={this.onInputHandler.bind(this)}/>
+                        <button onClick={this.onPushStart.bind(this)}>PushStart</button>
+                        <button onClick={this.onPushEnd.bind(this)}>PushEnd</button>
+                        <button onClick={this.onPopStart.bind(this)}>PopStart</button>
+                        <button onClick={this.onPopEnd.bind(this)}>PopEnd</button>
+                        <button onClick={this.onGetLength.bind(this)}>GetLength</button>
+                        <h3>{this.state.array.join("|")}</h3>
+                        {this.state.dispalyLength?<h2>{this.state.array.length}</h2>:<div></div>}
+                    </React.Fragment>
+                )
+            }
+        }
+
+        class App extends React.Component{
+            render(){
+                return <Deque/>;
+            }
+        }       
+
+        ReactDOM.render(<App/>,document.getElementById("root"));
+
+    </script>
+</body>
+</html>

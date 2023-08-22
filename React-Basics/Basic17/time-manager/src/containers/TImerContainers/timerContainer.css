@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-container{
+    width: 30%;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 20px 1.5%;
+}
+h2{
+    text-align: center;
+}
+
+p{
+    margin-block-start: 5%;
+    margin-block-end: 5%;
+}
+
+timer{
+    text-align: center;
+    border: 3px solid rgb(24, 191, 16);
+    font-size: 32px;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin: 1rem;
+    width: 31%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+   
+.btn-container{
+    display: inline-block;
+    width: 100%;
+}

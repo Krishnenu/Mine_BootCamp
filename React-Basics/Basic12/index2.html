@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+
+        class GrandChild extends React.Component{
+            static getDrivedStateFromProps(nextProps,prevState){
+                console.log('grand child',nextProps, prevState);
+            }
+            render(){
+                return (
+                    <React.Fragment>
+                        <h1>{this.props}</h1>
+                    </React.Fragment>
+                )
+            }
+        } 
+
+        class Child extends React.Component {
+            render(){
+                const {children}=this.props;
+                // console.log(displayProp);
+                return( 
+                    <div>
+                        <h1>{children}</h1>
+                        
+                    </div>
+                )                
+            }
+
+        }
+
+        class Parrent extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    count: 0,
+                    tRef: null
+                }
+            }
+            incrementTime(cb,timer) {
+                return setInterval(cb,timer*1000);
+            }
+
+            onClickTimerStartHandler() {
+                if(this.state.tRef){
+                    return;
+                }
+                this.setState({
+                    tRef: this.incrementTime(() => {
+                        this.setState((preState) => {
+                            return {
+                                count:preState.count+1,
+                            }
+                        });
+                    }, 1),
+                });
+            }
+
+            render() {
+                return (
+                    <React.Fragment>
+                        <Child >{this.state.count % 5 !== 0 ? 0 : this.state.count}</Child>
+                        <button onClick={this.onClickTimerStartHandler.bind(this)}>Start</button>
+                    </React.Fragment>
+                )
+            }
+        }
+
+        ReactDOM.render(<Parrent />, document.getElementById("root"));
+
+    </script>
+</body>
+
+</html>
