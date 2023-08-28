@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture011</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<!-- explain the definition of the word mounting -->
+<!-- explain componentWillMount[depricated React17] and componentDidMount in detail with practicle example -->
+<!-- explain how compoent will mount save one render cycle. -->
+<!-- Why the hell then CWM got depricated [performance,unsafe Side Effects->Race condition,componentWillMount, were not designed to handle the complexities of concurrent rendering(React18+)] -->
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        class RandomUser extends React.Component {
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        isLoading:true,
+                        userDetail:{},
+
+                    }
+                }
+                componentWillMount(){
+                    // fetch('https://randomuser.me/api/').then(res=>res.json()).then(json=>{
+                    //     console.log("json",json);
+                    //     if(json && json.results && Array.isArray(json.results) && json.results.length>1){
+                    //         throw new Error("Invalid response from random user api");
+                    //     }
+                    //     this.setState({
+                    //         isLoading:false,
+                    //         userDetail:json.results[0],
+                    //     });
+                    // })
+                }
+                componentDidMount(){
+                    fetch('https://randomuser.me/api/').then(res=>res.json()).then(json=>{
+                        console.log("json",json);
+                        if(json && json.results && Array.isArray(json.results) && json.results.length>1){
+                            throw new Error("Invalid response from random user api");
+                        }
+                        this.setState({
+                            isLoading:false,
+                            userDetail:json.results[0],
+                        });
+                    })
+                }
+                render() {
+                    console.log("Render");
+                    const {userDetail} = this.state;
+                    return this.state.isLoading ? <h1>Loading...</h1>:<div>
+                           <h2>{userDetail.name.first+" "+ userDetail.name.last}</h2> 
+                        </div>;
+                }
+            }
+        ReactDOM.render(<RandomUser/>,document.getElementById("root"));
+    </script>
+    
+</body>
+</html>

@@ -21,6 +21,7 @@
     <script type="text/babel">
 
         class GrandChild extends React.Component{
+            //if need more control over rerendering.
             static getDerivedStateFromProps(nextProps, prevState) {
                 console.log('grand child',nextProps, prevState);
             }
@@ -29,10 +30,19 @@
             }
         }
 
-        class Child extends React.Component{           
+        class Child extends React.Component{
+            
+            shouldComponentUpdate(nextProps){
+                if(nextProps.children !== this.props.children){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+           
             render(){
                 console.log("Child render");
-                const {children} = this.props;
+                const {children} = this.props  ;
                 return <div>
                     <h1>{children}</h1>
                     </div>
