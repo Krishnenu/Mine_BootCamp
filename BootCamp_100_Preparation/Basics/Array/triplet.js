@@ -71,5 +71,27 @@ Comparing the  elements,  so Bob receives a point.
 Comparing the  and  elements,  and  so Alice receives two points.
 The return array is .*/
 
+let a=[11,53,23];
+let b=[4,65,8];
 
+function compareTriplets(a, b) {
+    let aliaScore=0;
+    let bobScore=0;
+    let res=[];
+    for(let i=0;i<a.length;i++){
+        if(a[i]>b[i]){
+            bobScore=bobScore+1;
+            console.log(bobScore);
+        }else if(a[i]==b[i]){
+            bobScore=bobScore+0;
+            aliaScore=aliaScore+0;
+        }else if (a[i]<b[i]){
+            aliaScore=aliaScore+1;
+        }
+    }
+    res.push(aliaScore);
+    res.push(bobScore);
+    return res;
+}
 
+console.log(compareTriplets(a,b));
