@@ -64,3 +64,57 @@ console.log("Redux-like state:", reduxLikeState);
 pubsub.unsubscribe("event1", callback1);
 
 pubsub.publish("event1", "After unsubscribe"); // Only callback2 should be triggered
+
+//----------------------------------------------------------------------------------------------------------
+
+// Very Important to Know:
+
+import React, { createContext, useContext, useState } from 'react';
+
+// Create a context
+const MyContext = createContext();
+
+// Create a parent component that provides a value including a callback
+function ParentComponent() {
+  const [data, setData] = useState('');
+
+  const sendDataToParent = (newData) => {
+    // Update the data when called by child components
+    setData(newData);
+  };
+
+  return (
+    <MyContext.Provider value={{ data, sendDataToParent }}>
+      <ChildComponent />
+    </MyContext.Provider>
+  );
+}
+
+// Child component that consumes the context
+function ChildComponent() {
+  const { data, sendDataToParent } = useContext(MyContext);
+
+  const handleButtonClick = () => {
+    // Send data to the parent when a button is clicked
+    sendDataToParent('New data from child');
+  };
+
+  return (
+    <div>
+      <p>Data from parent: {data}</p>
+      <button onClick={handleButtonClick}>Send Data to Parent</button>
+    </div>
+  );
+}
+
+// App component that renders the parent component
+function App() {
+  return (
+    <div>
+      <ParentComponent />
+    </div>
+  );
+}
+
+export default App;
+
