@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { FcSearch } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import {CgSearchLoading} from "react-icons/cg";
 import {fetchMovieDetailRequest} from '../../Store/Actions/searchActions'
 import "./movieSearch.css";
 

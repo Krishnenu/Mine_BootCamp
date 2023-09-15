@@ -1,15 +1,39 @@
-import { createContext } from "react";
+// import { createContext, useState } from "react";
 
-const registraction_details = createContext([]);
+// export const Registraction_details = createContext();
 
-export const registraction_data = ({ children }) => {
+//  const Registraction= ({ children }) => {
+//   const [data, setData] = useState('');
+//   const sentDataToParent=(newdata)=>{
+//     setData(newdata);
+//   }
+//   console.log(data);
+//   return (
+//     <Registraction_details.Provider value={{data, sentDataToParent}}>
+//       {children}
+//     </Registraction_details.Provider>
+//   );
+// };
+
+
+import React, { createContext, useState } from "react";
+
+export const Registraction_details = createContext();
+
+const Registraction = ({ children }) => {
   const [data, setData] = useState('');
-  const sentDataToParent=()=>{
-    setData(newData);
-  }
+
+  const sendDataToParent = (newdata) => {
+    setData(newdata);
+  };
+
+  console.log(data);
+
   return (
-    <registraction_details.Provider value={(data, sentDataToParent)}>
+    <Registraction_details.Provider value={{ data, sendDataToParent }}>
       {children}
-    </registraction_details.Provider>
+    </Registraction_details.Provider>
   );
 };
+
+export default Registraction;
