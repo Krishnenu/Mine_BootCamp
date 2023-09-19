@@ -1,3 +1,7 @@
+/**
+ * @param {number} val 
+ */
+
 function issueTicket(val){
     let ticNo=val;
     return function getTicket(){

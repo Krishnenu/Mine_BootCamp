@@ -47,23 +47,17 @@ for (let i = 0; i < 20; i++) {
 
 const promiseAllSettled = (promiseList) => {
   return new Promise((resolve, reject) => {
-    let count = promiseList.length; //This flag is to keep track ie array.map is synchronous.
     const resultList = [];
-    promiseList.forEach((promise) => {
+    promiseList.forEach((promise, index) => {
       promise.then((response) => {
-        count--;
         resultList.push(response);
-        if (count === 0) {
-          resolve(resultList);
-        }
       });
       promise.catch((reason) => {
-        count--;
         resultList.push(reason);
-        if (count === 0) {
-          resolve(resultList);
-        }
       });
+      if (index === promiseList.length - 1) {
+        resolve(resultList);
+      }
     });
   });
 };
@@ -73,13 +67,12 @@ const promiseAllSettled = (promiseList) => {
 
 // // It will only resolve if all the promises passed have been resolved.
 // // If any promise in an array of promises fails then it will reject.
+
 const promiseAll = (promiseList) => {
-  return new Promise((resolve, reject) => {
-    let count = promiseList.length; 
+  return new Promise((resolve) => {
     const resultList = [];
-    promiseList.forEach((promise) => {      
-      promise.then((response)=>{
-        count--;
+    promiseList.forEach((promise) => {
+      promise.then((response) => {
         resultList.push(response);
       });
     });
