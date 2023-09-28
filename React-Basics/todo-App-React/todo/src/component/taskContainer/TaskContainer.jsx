@@ -1,18 +1,15 @@
 import { useState } from "react";
 
-const TaskContainer=({item,removeItem,id,editItemHandler,mode})=>{
-    const [edit,setEdit]=useState("");
-    
-    const changeHandler=(event)=>{
-        setEdit(event.target.value);
-    }
+const TaskContainer=({item,removeItem,id,editItemT})=>{
     
     return (
-        <div>
-           <input type="text" value={item} onChange={changeHandler}/>
-           <button type="submit" onClick={()=>editItemHandler(edit,id)}>Edit</button>
+        <>
+         <div>
+           <input type="text" value={item}/>
+           <button type="submit" onClick={()=>editItemT(id)}>Edit</button>
            <button type="submit" onClick={()=>removeItem(id)}>Del</button>       
         </div>
+        </>       
     )
 }
 
