@@ -1,0 +1,42 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+.main_section {
+  width: 300px;
+}
+
+.from_Section {
+  display: inline;
+}
+
+.password,
+.email {
+  display: block;
+  width: 250px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.declration_Section {
+  text-align: justify;
+  width: 250px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.declration_content {
+  display: inline;
+}
+
+.login_Btn {
+  width: 250px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.login_Btn:hover {
+  background-color: rgb(21, 21, 200);
+}
