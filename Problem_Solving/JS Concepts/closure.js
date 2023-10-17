@@ -14,5 +14,8 @@ function issueTicket(val){
     }
 }
 
-let ticket=20;
+let ticket=2;
 var anda = issueTicket(ticket);
+anda();
+anda();
+anda();
