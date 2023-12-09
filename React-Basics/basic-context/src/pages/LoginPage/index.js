@@ -1,10 +1,13 @@
+import { createContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import MyContext from "../Contexts/Context";
 
-const LoginPage = ({ getUserData }) => {
+const LoginPage = (props) => {
   const navigate = useNavigate();
 
   const [input, setInputData] = useState({ email: "", password: "" });
+  const [userDetails,setUserDetail]=useState([]);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -33,7 +36,7 @@ const LoginPage = ({ getUserData }) => {
             })
               .then((res) => res.json())
               .then((data) => {
-                getUserData(data.data);
+                setUserDetail(data);
                 navigate("home");
               })
               .catch((error) => console.log("not worked"));
@@ -52,6 +55,7 @@ const LoginPage = ({ getUserData }) => {
     // }));
   };
   return (
+    <MyContext.Provider value={userDetails.data}>
     <div className="main_section">
       <div>
         <img
@@ -98,8 +102,11 @@ const LoginPage = ({ getUserData }) => {
           </form>
         </div>
       </div>
-    </div>
+      {props.children}
+    </div>    
+    </MyContext.Provider>
   );
+  
 };
 
 export default LoginPage;

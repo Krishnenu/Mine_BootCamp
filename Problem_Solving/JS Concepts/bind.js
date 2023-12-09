@@ -111,8 +111,9 @@ let game2 = {
  }
 
 
- getGameType.bind(game1)();
- getGameType.call(game2);
+ console.log(getGameType.bind(game1));
+ console.log(getGameType.call(game2));
+ console.log(getGameType.apply(game2));
 
 
 

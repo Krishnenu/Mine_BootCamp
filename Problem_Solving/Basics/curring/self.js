@@ -6,13 +6,13 @@ const s=function (a){
     }
 }
 
-let adderA=s(10);
-let adderB=adderA(34);
-let adderC=adderB(20);
-let addertwo=s(20)(7);
+let arg1=s(1);
+let arg2=arg1(2);
+// let addertwo=s(20)(7);
 
 let adderAll=s(10)(20)(30);
 
-console.log(adderC);
-console.log(adderAll);
-console.log(addertwo(45));
+// console.log(adderC);
+// console.log(adderAll);
+// console.log(addertwo(45));
+console.log(arg2(3));
