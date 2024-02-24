@@ -17,8 +17,12 @@ Array.prototype.addAll=function(){
     return obj;
 }
 
-
-
 let arr = [0,1,2,"hi","how are you",8,3,6,];
 let result = arr.addAll();
 console.log(result);
+
+Array.prototype.add=function (a,b){
+return a+b;
+}
+
+console.log(arr.add(45,56));
